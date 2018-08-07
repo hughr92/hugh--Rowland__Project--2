@@ -1,4 +1,6 @@
 
+console.log('commit worked');
+
 console.log('ready');
 // ABOUT US SCROLL
 const leftArrow = $('.fa-angle-left');
@@ -277,7 +279,6 @@ window.onresize = function () {
     projectItem = 0;
     projectContainer.css('transform', `translateX(-${projectItem * 25}%)`);
     
-    console.log('commit worked');
 };
 
 // SMOOTH SCROLL
