@@ -95,19 +95,31 @@
         border-left: none;
     }
     &__list {
+        cursor: pointer;
         display: flex;
         flex-wrap: wrap;
         list-style: none;
         margin: 0;
         padding: 0;
         justify-content: space-between;
+        max-width: 500px;
         &__container {
+            background-color: $black;
             margin: 5px 5px;
             width: calc((100% / 4) - 10px);
+            &:hover {
+                background-color: $secondaryColor;
+            }
         }
         &__item {
+            clip-path: polygon(00% 0%, 100% 0%, 100% 0%, 100% 100%, 100% 100%, 00% 100%, 0% 100%, 0% 0%);
             object-fit: cover;
             width: 100%;
+            height: 100%;
+            transition: 0.3s all;
+            &:hover {
+                clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+            }
         }
     }
 }
@@ -182,7 +194,7 @@
                 cursor: pointer;
                 color: #707070;
                 &:hover {
-                    color: $secondaryColor;
+                    color: $primaryColor;
                 }
                 &__icon {
                     position: relative;
@@ -264,11 +276,15 @@
             background-color: #fff;
             bottom: 0;
             right: 0;
+            &--change {
+            background-color: $secondaryColor;
+            }
         }
         &--label {
             position: fixed;
             z-index: 200;
         }
+        
     }
     
 }

@@ -114,6 +114,7 @@
 
 
 @media (max-width:750px) {
+    
     .mainNav {
         background-position: top;
         background: none;
@@ -121,16 +122,16 @@
 
         }
         &__burgerMenu {
+            // z-index: 10000;
             // display: block;
             position: fixed;
             right: 0;
             top: 0;
-            &:checked + .mainNav__container {
+            &:checked ~ .mainNav__container {
                 right: 0;
             }
-            &:checked &__toggle{
-                color: $primaryColor;
-            }
+           
+            
             &__toggle {
                 display: block;
                 position: fixed;
@@ -148,7 +149,12 @@
                 &:hover {
                     color: $secondaryColor;
                 }
+                &--change {
+                    background-color: $primaryColor;
+                    color: white;
+                }
             }
+            
         }
         &__container {
             border: .5px solid $accentColor;

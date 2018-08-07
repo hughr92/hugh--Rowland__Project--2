@@ -295,3 +295,23 @@ $("#welcomeButton").click(function () {
 
 
 
+$('.mainNav__burgerMenu__toggle').on('click', function(){
+    if ($(this).hasClass('mainNav__burgerMenu__toggle--change')){
+        console.log('ahhhhh');
+        $(this).removeClass('mainNav__burgerMenu__toggle--change');
+    } else {
+        $(this).addClass('mainNav__burgerMenu__toggle--change');
+    }
+});
+
+$('.footer__socialNav--label__icon').on('click', function () {
+    if ($('.footer__socialNav__back').hasClass('footer__socialNav__back--change')) {
+        console.log('ahhhhh');
+        $('.footer__socialNav__back').removeClass('footer__socialNav__back--change');
+        $(this).css('transform', 'rotate(90deg)');
+    } else {
+        console.log('wooo');
+        $('.footer__socialNav__back').addClass('footer__socialNav__back--change');
+        $(this).css('transform', 'rotate(-90deg)');
+    }
+});
