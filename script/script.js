@@ -276,7 +276,8 @@ window.onresize = function () {
 
     projectItem = 0;
     projectContainer.css('transform', `translateX(-${projectItem * 25}%)`);
-    w = window.innerWidth;
+    
+    console.log('commit worked');
 };
 
 // SMOOTH SCROLL
