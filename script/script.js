@@ -162,11 +162,11 @@ projectLeft.on('click', function () {
     }
 });
 
-window.onresize = function () {
-    projectItem = 0;
-    projectContainer.css('transform', `translateX(-${projectItem * 25}%)`);
-    w = window.innerWidth;
-};
+// window.onresize = function () {
+//     projectItem = 0;
+//     projectContainer.css('transform', `translateX(-${projectItem * 25}%)`);
+//     w = window.innerWidth;
+// };
 
 
 
@@ -273,6 +273,10 @@ window.onresize = function () {
     teamPosition = 1;
     teamArrowLeft.css('background-color', 'grey');
     teamArrowRight.css('background-color', 'black');
+
+    projectItem = 0;
+    projectContainer.css('transform', `translateX(-${projectItem * 25}%)`);
+    w = window.innerWidth;
 };
 
 // SMOOTH SCROLL
