@@ -1,0 +1,96 @@
+.otherServices {
+    &__half {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 25px;
+        &__content {
+            width: 50%;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            text-align: center;
+            position: relative;
+            align-items: flex-start;
+            justify-content: center;
+            padding: 60px 50px;
+        }
+        &__number {
+            position: absolute;
+            top: 0px;
+            left: 40px;
+            font-size: 10rem;
+            font-family: $primaryFont;
+            font-weight: 700;
+            color: $accentColor;
+            transform: translateY(-75%);
+        }
+        &__header {
+            font-family: $primaryFont;
+            text-transform: uppercase;
+            margin: 0 auto;
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        &__text {
+            font-family: $secondaryFont;
+            font-size: 1.2rem;
+            margin-bottom: 35px;
+        }
+        &__image {
+            width: 50%;
+            object-fit: cover;
+            height: 100%;
+        }
+    }
+}
+
+@media (max-width: 850px) {
+    .otherServices {
+        &__half {
+            position: relative;
+            &--bottom {
+                align-content: flex-end;
+            }
+
+            &__content {
+                background-color: #fff;
+                width: 350px;
+                z-index: 10;
+                padding:60px 30px;
+                &--bottom {
+                    margin-left: calc(100% - 350px);
+                }
+            }
+            &__image {
+                position: absolute;
+                &--top {
+                    right: 0;
+                }
+                &--bottom {
+                    left: 0;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .otherServices {
+        &__half {
+
+            &__content {
+                // border: 1px solid green;
+                width: 100%;
+                padding:60px 0px;
+                &--bottom {
+                    margin-left: 0px;
+                }
+            }
+            &__image {
+                display: none;
+            }
+        }
+    }
+}

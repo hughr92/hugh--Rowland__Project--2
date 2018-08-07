@@ -1,0 +1,167 @@
+
+* {
+    // border: 1px solid red;
+}
+.team {
+    background-color: $accentColor;
+    position: relative;
+    &__arrow {
+            background-color: black;
+            position: absolute;
+            height: 40px;
+            width: 20px;
+            top: calc(50% + 20px);
+            cursor: pointer;
+            display: none;
+            z-index: 100;
+            &:hover {
+                background-color: $secondaryColor;
+            }
+            &--left {
+                left: 4%;
+                mask-image: url('../assets/angle-left-solid.svg');
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+            }
+            &--right {
+                right: 4%;
+                mask-image: url('../assets/angle-right-solid.svg');
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+            }
+        }
+    &__figure {
+        display: block;
+        width: calc((100% / 3) - 40px);
+        margin: 20px;
+        position: relative;
+        height: 250px;
+        cursor: pointer;
+        overflow: hidden;
+        &__image {
+            width: 100%;
+            object-fit: cover;
+            height: 100%;
+        }
+        &:hover  &__textContainer{
+            opacity: 1;
+            background-position: top;
+        }
+        &__textContainer {
+            opacity: 0;
+            z-index: 10;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, transparent 50%, rgba(0,0,0,0.6) 50%);
+            position: absolute;
+            background-size: 100% 200%;
+            background-position: bottom;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: center;
+            text-align: center;
+            transition: .3s all;
+        }
+        &__name {
+            width: 100%;
+            margin: auto;
+            font-family: $primaryFont;
+            font-weight: 700;
+            font-size: 2.5rem;
+            color: white;
+            margin: 6px; 
+        }
+        &__title {
+            width: 100%;
+            margin: auto;
+            font-family: $primaryFont;
+            font-weight: 700;
+            font-size: 1.2rem;
+            letter-spacing: 1.5px;
+            color: white;
+            text-transform: uppercase;
+        }
+        &__contact {
+            padding: 40px 0;
+            position: absolute;
+            bottom: -100%;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            background-color: $primaryColor;
+            color: white;
+            font-size: 1.2rem;
+            font-family: $secondaryFont;
+            align-items: center;
+            justify-content: space-around;
+            z-index: 20;
+            transition: all .3s;
+            &__info--icon {
+                margin-right: 5px;
+                font-size: 1.5rem;
+            }
+        }
+        &:active &__contact {
+            bottom: 0;
+        }
+        
+    }
+}
+
+
+@media (max-width: 850px) {
+    .team {
+        &__arrow {
+            display: block;
+        }
+        &__figure {
+            width: 50%;
+            margin: 20px 0;
+            overflow: visible;
+            &--1 {
+
+            }
+            &--2 {
+                display: none;
+            }   
+            &--3 {
+                display: none;
+            }
+            &__contact {
+                right: -100%;
+                bottom: 0;
+                transition: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .team {
+
+        &__figure {
+            width: 100%;
+            margin: 20px 0;
+            overflow: hidden;
+            &--1 {
+
+            }
+            &--2 {
+                // display: none;
+            }   
+            &--3 {
+                // display: none;
+            }
+            &__contact {
+                right: 0;
+                bottom: -100%;
+                transition: all .3s;
+            }
+        }
+    }
+}

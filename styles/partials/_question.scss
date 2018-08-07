@@ -1,0 +1,20 @@
+.questions {
+    background-color: $secondaryColor;
+    &__form {
+        margin: 0 auto;
+        max-width: 500px;
+        display: flex;
+        flex-wrap: wrap;
+        &__input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid $black;
+            background-color: transparent;
+            margin-bottom: 30px;
+            font-family: $secondaryFont;
+            &:focus {
+                background-color: $accentColor;
+            }
+        }
+    }
+}

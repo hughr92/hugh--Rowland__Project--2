@@ -1,0 +1,26 @@
+// SETUP / MIXINS / GENERAL STYLES
+@import "partials/_setup.scss";
+@import "partials/_mixins.scss";
+@import "partials/elements.scss";
+
+// HEADER
+@import "partials/_header.scss";
+
+// SECTIONS
+@import "partials/_welcome.scss";
+@import "partials/whyUs.scss";
+@import "partials/_services.scss";
+@import "partials/_aboutUs.scss";
+@import "partials/_projects.scss";
+@import "partials/_otherServices.scss";
+@import "partials/_question.scss";
+@import "partials/_team.scss";
+
+// FOOTER
+@import "partials/_footer.scss";
+
+* {
+    // border: 1px solid red;
+}
+
+

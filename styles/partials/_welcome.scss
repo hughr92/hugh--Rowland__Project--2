@@ -1,0 +1,12 @@
+.welcome {
+    // padding: 70px 0;
+    &__caption {
+        font-family: $secondaryFont;
+        text-align: center;
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+        margin-bottom: 40px;
+        font-weight: 100;
+        color: #707070
+    }
+}

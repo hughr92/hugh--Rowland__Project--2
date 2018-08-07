@@ -1,0 +1,176 @@
+
+
+
+
+// HEADER
+
+.header {
+    height: 100vh;
+    background-image: url('../assets/image-1.jpeg');
+    background-position: 50% 50%;
+    background-size: cover;
+    font-family: $primaryFont;
+    background-attachment: fixed;
+}
+
+// NAV
+
+
+.mainNav {
+    z-index: 20;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    // position: fixed;
+    top: 0px;
+    background-color: #fff;
+    background: linear-gradient(to top, transparent 50%, white 50%);
+    background-position: bottom;
+    background-size: 100% 200%;
+    transition:all .3s ease;
+    &__burgerMenu {
+           display: none; 
+           &__toggle {
+               display: none;
+           }
+        }
+    &:hover {
+        background-position: top;
+        }
+    &__logo {
+        flex: 0 0 auto;
+        text-transform: uppercase;
+        font-size: 3rem;
+        }
+    &__container {
+        flex: 1 0 auto;
+        display: flex;
+        justify-content: flex-end;
+        list-style: none;
+        align-items: center;
+        justify-content: space-around;
+        &__listItem {
+            text-transform: uppercase;
+            text-decoration: none;
+            font-size: 1.5rem;
+            color: black;
+            font-weight: 600;
+            padding: 10px;
+            position: relative;
+            &:hover {
+                color: $secondaryColor;
+                &:after {
+                    bottom: 3px;
+                    opacity: 1;
+                }
+            }
+            &:after {
+                content: "";
+                width: calc(100% - 20px);
+                transform: translateX(10px);
+                position: absolute;
+                border-bottom: 5px solid $primaryColor;
+                height: 10px;
+                bottom: -15px;
+                left: 0;
+                opacity: 0;
+                transition: all 0.3s;
+                // transition-delay: 0.3s;
+
+            }
+        }
+    }
+}
+
+
+.heroHeader {
+    font-weight: 700;
+    text-transform: uppercase;
+    transform: translateY(-50%);
+    // position: fixed;
+    // z-index: 1;
+}
+
+.heroHeader__mainHeader {
+    font-size: 4rem;
+    margin-bottom: 0px;
+}
+
+.heroHeader__subHeader {
+    font-size: 2rem;
+}
+
+.navBarFixed {
+    position: sticky;
+    z-index: 10;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #fff;
+    border-bottom: 5px solid $accentColor;
+}
+
+
+
+@media (max-width:750px) {
+    .mainNav {
+        background-position: top;
+        background: none;
+        &__logo {
+
+        }
+        &__burgerMenu {
+            // display: block;
+            position: fixed;
+            right: 0;
+            top: 0;
+            &:checked + .mainNav__container {
+                right: 0;
+            }
+            &:checked &__toggle{
+                color: $primaryColor;
+            }
+            &__toggle {
+                display: block;
+                position: fixed;
+                font-size: 2rem;
+                right: 0px;
+                top: 0px;
+                z-index: 250;
+                cursor: pointer;
+                background-color: #fff;
+                padding: 10px;
+                border-bottom-left-radius: 5px;
+                border: .5px solid $accentColor;
+                border-top: none;
+                border-right: none;
+                &:hover {
+                    color: $secondaryColor;
+                }
+            }
+        }
+        &__container {
+            border: .5px solid $accentColor;
+            border-right: none;
+            padding: 20px 10px;
+            border-bottom-left-radius: 10px;
+            border-top-left-radius: 10px;
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            right: -100%;
+            flex-direction: column;
+            background-color: white;
+            z-index: 200;
+            transition: all .5s;
+            &__listItem {
+                display: block;
+                width: 100%;
+                padding: 20px;
+               
+                
+            }
+        }
+    }
+}

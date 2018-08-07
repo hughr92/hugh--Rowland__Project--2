@@ -1,0 +1,82 @@
+
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 900px;
+    width: 85%;
+    &--flex {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        height: 100%;
+    }
+    &--hero {
+        flex-direction: column;
+        justify-content: center;
+        // position: fixed;
+    }
+    &--center {
+        align-content: center;
+    }
+}
+
+
+.btn {
+    font-family: $primaryFont;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: linear-gradient(to left, $primaryColor 50%, $secondaryColor 50%);
+    background-size: 200% 100%;
+    background-position:right bottom;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 10px;
+    border: none;
+    transition: all 0.3s;
+    &:hover {
+        box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+        background-position:left bottom;
+    }
+    &--black {
+        background: linear-gradient(to left, $black 50%, $primaryColor 50%);
+        background-size: 200% 100%;
+        background-position:right bottom;       
+        &:hover {
+            background-color: $primaryColor;
+        }
+    }
+    &--center {
+        margin: 0 auto;
+    }
+    
+}
+
+.sectionPadding {
+    padding: 60px 10px;
+}
+
+.sectionHeader {
+    letter-spacing: 1px;
+    color: $black;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: $primaryFont;
+    font-size: 3rem;
+    font-weight: 700;
+    width: 100%;
+    &--blue {
+        color: $primaryColor;
+    }
+    &--white {
+        color: $accentColor;
+    }
+    &--footer {
+        color: white;
+        font-size: 2rem;
+    }
+    &--whyUs {
+        text-align: left;
+    }
+}
